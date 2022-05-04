@@ -1,0 +1,5 @@
+Flask-Mail
+imutils
+tensorflow
+opencv-contrib-python
+flask
