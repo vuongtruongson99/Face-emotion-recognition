@@ -11,6 +11,12 @@
     <div class="container h-100">
         <div class="row">
             <div class="col-12 text-center">
+                {% for mess in get_flashed_messages()  %}
+                    <div class="alert alert-success" role="alert">
+                    {{mess}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
                 <h3>Или вы можете загрузить фото ...!</h3>
             </div>
             
@@ -19,17 +25,6 @@
         <div class="row video">
             <div class="col-lg-8 col-sm-8">
                 <p></p>
-                <!-- <p>
-                    {% with messages = get_flashed_messages() %}
-                      {% if messages %}
-                        <ul>
-                        {% for message in messages %}
-                          <li>{{ message }}</li>
-                        {% endfor %}
-                        </ul>
-                      {% endif %}
-                    {% endwith %}
-                </p> -->
                 {% if filename %}
                     <div style="padding: 20px; background-color: var(--bg-section); border-radius: 100px; margin-bottom: 10px;">
                         <img style="width: 100%; border-radius: 100px" src="{{ url_for('display_image', filename=filename) }}">

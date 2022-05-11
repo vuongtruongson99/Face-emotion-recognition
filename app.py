@@ -91,17 +91,17 @@ def video_feed():
 @app.route('/image', methods=['POST'])
 def upload_image():
     if 'file' not in request.files:
-        flash('No file part')
+        flash('Нет файловой части')
         return redirect(request.url)
     file = request.files['file']
     if file.filename == '':
-        flash('No image selected for uploading')
+        flash('Не выбрано изображение для загрузки')
         return redirect(request.url)
     if file and allowed_file(file.filename):
         filename = file.filename
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         #print('upload_image filename: ' + filename)
-        flash('Image successfully uploaded and displayed below')
+        flash('Изображение успешно загружено')
 
         img = cv2.imread(app.config["UPLOAD_FOLDER"] + filename)
         img = imutils.resize(img, width=700)
@@ -136,10 +136,10 @@ def upload_image():
 
             return render_template('3rd_section.html', filename=filename, percent=emo)
         else:
-            flash('No face')
+            flash('Без лица')
             return redirect(request.url)
     else:
-        flash('Allowed image types are - png, jpg, jpeg, gif')
+        flash('Допустимые типы изображений: - png, jpg, jpeg')
         return redirect(request.url)
 
 @app.route('/contact', methods=['POST'])
