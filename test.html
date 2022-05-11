@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .bg-dark {
+      background-color: #101011 !important;
+    }
+
+    .navbar-dark .navbar-brand {
+      padding: 20px 0 10px 10px;
+      color: #fff;
+    }
+    .navbar-nav .nav-link {
+      color: #101011;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 1);
+    }
+    .navbar-dark .navbar-brand {
+       margin: 0;
+       width: 50%;
+       float: left;
+       display: inherit;
+    }
+    .navbar-brand {
+      color: #101011;
+      padding: 20px 0 10px 10px;
+    }
+
+    body .navbar {
+      padding: 6px 0 !important;
+    }
+
+    body .navbar-brand {
+      background: none;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body style=height:120vh class="bg-info">
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+  <div class="container-fluid">
+    <a href="#" class="navbar-brand">WorkonPro</a>
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-bs-target="#navbarNav"
+      data-bs-toggle="collapse"
+      arial-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle Navbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="mx-auto"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active item-space" href="#" aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link item-space" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link item-space" href="#"> Healthcare </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link item-space" href="#">Tech</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link btn btn-sm item-space grey-button"
+            style="color: #fff"
+            role="button"
+            >Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link btn btn-sm item-space green-button"
+            style="color: #fff"
+            role="button"
+            ><strong>Create account</strong>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script> -->
+<script>
+  var nav = document.querySelector('nav');
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 100) {
+      nav.classList.add('bg-dark', 'shadow');
+    } else {
+      nav.classList.remove('bg-dark', 'shadow');
+    }
+  });
+</script>

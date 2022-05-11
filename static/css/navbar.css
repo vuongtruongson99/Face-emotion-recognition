@@ -1,10 +1,24 @@
 /* NAVBAR */
+.nav-colored {
+    background-color:#FFFF !important;
+    /* box-shadow: 5px -1px 12px -5px grey; */
+    transition: background-color 100ms linear;
+}
+
+.nav-transparent {
+    background-color: transparent;
+}
+
+/* .navbar .scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  } */
+
 .navbar {
     padding: 1em 0;
     margin-bottom: 0;
     border: none;
-    background-color: transparent;
-    background-image: none;
+    /* background-color: red; */
 }
 
 .navbar .navbar-brand {
