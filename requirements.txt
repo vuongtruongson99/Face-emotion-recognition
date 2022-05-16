@@ -3,3 +3,4 @@ imutils
 tensorflow
 opencv-contrib-python
 flask
+gunicorn
